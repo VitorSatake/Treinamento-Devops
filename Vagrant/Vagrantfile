@@ -75,3 +75,7 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 end
+
+
+# vagrant suspend , salva o estado
+# vagrant resume, reestarta
