@@ -1,0 +1,5 @@
+---
+- hosts: all # quantos hosts
+  become: true # permissao de root
+    roles: # oque quero fazer, a role
+      - ansible-role-mysql # instalar o mysql
