@@ -1,4 +1,10 @@
 Vagrant.configure("2") do |config|
+  config.vm.provider "virtualbox" do |vb| # provider no caso VirtualBox
+    vb.name = "Primeira-Maquina" # nome da vm
+    vb.memory = 2048 # tamanhop da memória
+    vb.cpus = 2 # quantidade de cpus
+  end
+  
   config.vm.box = "hashicorp/bionic64"
   config.vm.network "forwarded_port", guest: 80, host: 8090 # localhosst
   config.vm.network "public_network", ip: "192.168.1.55" # rede publica
@@ -10,9 +16,11 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
   end
-  
+
 end
 
-
+# vagrant init , inicializa o vagrant, criando o Vagrantfile
+# vagrant up , inicia a criação da vm com a configurações
+# vagrant reload , reinicializa a vm , configurando novas alterações feitas , sem precisar criar do zero a vm
 # vagrant suspend , salva o estado
 # vagrant resume, reestarta
