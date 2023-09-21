@@ -1,0 +1,1 @@
+Este diretório foi criado para cirar vms no virtual box para prática de Ansible.
