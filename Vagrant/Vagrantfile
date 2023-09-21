@@ -24,3 +24,5 @@ end
 # vagrant reload , reinicializa a vm , configurando novas alterações feitas , sem precisar criar do zero a vm
 # vagrant suspend , salva o estado
 # vagrant resume, reestarta
+# vagrant halt , desliga a maquina
+# vagrant destroy , exclui a maquina
